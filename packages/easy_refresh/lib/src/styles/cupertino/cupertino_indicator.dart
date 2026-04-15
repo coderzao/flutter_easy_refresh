@@ -148,11 +148,14 @@ class _CupertinoIndicatorState extends State<_CupertinoIndicator>
                   key: const ValueKey('noMore'),
                   child: widget.emptyWidget!,
                 )
-              : Icon(
-                  CupertinoIcons.archivebox,
-                  key: const ValueKey('noMore'),
-                  color: widget.foregroundColor,
-                )
+              : Text(
+                    '没有更多数据了',
+                    key: const ValueKey('noMore'),
+                    style: TextStyle(
+                      color: widget.foregroundColor ?? Colors.grey,
+                      fontSize: 12,
+                    ),
+                  )
           : indicator,
     );
   }
